@@ -1,3 +1,3 @@
 # SquidBomb
 
-Right click with ink sack -> firework and blindness. Currently this plugin only supports 1.8.8 - 1.12.2, but hopefully this will change.
+Right click with ink sack -> firework and blindness. This plugin supports any MC version from 1.8.8 to 1.18.2.
