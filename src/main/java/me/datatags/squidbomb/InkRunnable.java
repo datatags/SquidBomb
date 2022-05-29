@@ -3,7 +3,6 @@ package me.datatags.squidbomb;
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
-import org.bukkit.Material;
 import org.bukkit.FireworkEffect.Type;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -11,7 +10,6 @@ import org.bukkit.entity.Firework;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Squid;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.FireworkMeta;
 import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.potion.PotionEffect;
@@ -19,12 +17,14 @@ import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
+import com.cryptomorin.xseries.XMaterial;
+
 import java.util.HashSet;
 import java.util.Set;
 
 public class InkRunnable extends BukkitRunnable {
     private static final Set<PotionEffect> EFFECTS = new HashSet<>();
-    private static final FireworkMeta FIREWORK_META = (FireworkMeta) new ItemStack(Material.FIREWORK).getItemMeta();
+    private static final FireworkMeta FIREWORK_META = (FireworkMeta) XMaterial.FIREWORK_ROCKET.parseItem().getItemMeta();
     static {
         FireworkEffect effect = FireworkEffect.builder().with(Type.BALL_LARGE).withColor(Color.GRAY, Color.BLACK).build();
         FIREWORK_META.addEffect(effect);
